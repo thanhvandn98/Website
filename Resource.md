@@ -1,3 +1,5 @@
+# 40+ Online Tools & Resources For Web Developers & Designers
+# [Traversy Media] (https://www.youtube.com/watch?v=4JC8ahZneYU&ab_channel=TraversyMedia)
 # GENERATORS:
 * Text Content Generator - http://www.lipsum.com
 * Favicon Generator - http://tools.dynamicdrive.com/favicon
