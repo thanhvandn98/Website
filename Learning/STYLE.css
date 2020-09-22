@@ -1,0 +1,28 @@
+/*Comment*/
+div h2
+{
+    color: #834CF5;
+    margin: 0px;
+    font-family: 'Pacifico', cursive;
+    font-weight: 300;
+}
+/*. which mean its targeting some class name...*/
+.index-h3
+{
+    color: darkcyan;
+    font-family: 'Long Cang', cursive;
+    font-weight: 300;
+    font-size: 30px;
+    
+}
+.index-intro
+p
+{
+    color:#3A79F5;
+    text-align: justify;
+    text-decoration: none;
+    text-indent: 30px;
+    font-size: 25px;
+    /*font-family: 'Grandstander', cursive;*/
+    font-family: 'Dancing Script', cursive;
+}

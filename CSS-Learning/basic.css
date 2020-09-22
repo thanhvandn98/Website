@@ -1,0 +1,33 @@
+.container
+{
+    height: 100%;
+    display:grid;
+    border-style: solid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    color: #fe12fe;
+    background-color: black;
+    
+}
+/**.Header
+{
+    grid-column: 2/-1;
+    border-style: solid;
+}
+.Menu
+{
+    grid-row:1/3;
+    border-style: solid;
+}
+.Content
+{
+    grid-column: 2/-1;
+    border-style: solid;
+}
+.Footer
+{
+    grid-column:1/-1;
+    border-style: solid;
+}
+**/

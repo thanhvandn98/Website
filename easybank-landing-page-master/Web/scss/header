@@ -1,0 +1,21 @@
+.header
+{
+    &__logo
+    {
+
+    }
+    &__menu //Mobile Menu
+    {
+        > span: 
+        {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color:$darkBlue;
+            &:not(:last-child)
+            {
+                margin-bottom: 3px;
+            }
+        };
+    }
+}
