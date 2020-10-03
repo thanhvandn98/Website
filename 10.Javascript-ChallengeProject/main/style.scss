@@ -1,0 +1,132 @@
+@mixin container()
+{
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+}
+@mixin flex-container()
+{
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+
+//*Challenge 1
+.flex-box-container-1
+{
+    @include flex-container();
+    border: 1px solid black;
+    flex-direction: row;
+    justify-content: space-evenly;
+    div
+    {
+        display: flex;
+        padding: 10px;
+        border: 1px solid black;
+        align-items: center;
+    }
+}
+.container-1
+{
+    border: 1px solid black;
+    @include container()
+}
+
+//*Challenge 2
+.container-2
+{
+    border: 1px solid blue;
+    @include container();
+}
+.flex-box-container-2
+{
+    @include flex-container();
+    justify-content: space-around;
+    border: 1px solid blue;
+    padding: auto;
+    iframe
+    {
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
+    }
+}
+
+//*Challenge 3
+.flex-box-rps, .flex-box-pick-color
+{
+    img:hover
+    {
+        box-shadow: 0 10px 50px rgba(37, 50, 233, 1);
+    }
+    @include flex-container();
+    border: 1px solid black;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.container-3, .container-4
+{
+    @include container();
+    border: 1px solid red; 
+}
+
+//*Challenge 5
+.container-5
+{
+    @include container();
+    border: 1px solid red; 
+}
+.flex-blackjack-row-1, .flex-blackjack-row-2, .flex-blackjack-row-3
+{
+    @include flex-container();
+    border: 1px solid black;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.flex-blackjack-row-1
+{
+    background: url(/img/thumb-1920-954241.jpg) center no-repeat;
+    border-radius: 5px;
+    z-index: -1;
+    color: #fff;
+    opacity: 0.8;
+    div
+    {
+        border: 1px solid black;
+        flex: 1;
+        text-align: center;
+        height: 350px;
+        padding: 1rem 1rem;   
+        box-shadow: 5px 5px rgba(37, 50, 233, 1) ;
+    }
+    img 
+    {
+        width: 25%;
+        padding: 10px;
+    }
+}
+.flex-blackjack-row-2
+{
+    background: url(/img/thumb-1920-954241.jpg) center no-repeat;
+    z-index: -1;
+    color: #fff;
+    opacity: 0.8;
+    button
+    {
+        border: 1px solid black;
+    }
+    div
+    {
+        border: 1px solid blue;
+        border-radius: 5px;
+        box-shadow: 5px 5px rgba(37, 50, 233, 1);
+        padding: 10px 10px;
+    }
+}
+table, th, td
+{
+    text-align: center;
+    flex: 1;
+    padding: 5px;
+    border: 1px solid black;
+    box-shadow: 5px 5px rgb(81, 91, 230);
+}
