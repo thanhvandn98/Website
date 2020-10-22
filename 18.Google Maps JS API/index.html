@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map API JS</title>
+    <style>
+        #map
+        {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>MAP API</h1>
+    <div id="map"></div>
+    <script>
+        function initMap()
+        {
+            /--*Map options--/
+            var options = 
+            {
+                zoom: 15,
+                center: {lat: 16.047079, lng:108.206230}
+            }        
+            var map = new google.maps.Map(document.getElementById('map'), options);
+            //Listen for click on map
+            google.maps.event.addListener(map, 'click', function(e){
+                // Add marker
+                addMarker({coords:event.latLng});
+            });
+            //Array of markers
+            var markers = [
+                {
+                    coords:{lat: 21.027763, lng: 105.834160},
+                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content: '<h1>Boring</h1>'
+                },
+                {
+                    coords:{lat: 10.924067, lng: 106.713028}
+                },
+                {
+                    coords:{lat: 20.865139, lng: 106.683830}
+                }
+            ]
+            //Loop through markers
+            for (var i = 0; i < markers.length; i++)
+            {
+                addMarker(markers[i]);
+            }
+            //Add marker function
+            function addMarker(props)
+            {
+                var marker = new google.maps.Marker({
+                position: props.coords,
+                map: map,
+                // icon: props.iconImage
+                });
+
+                //Check for custom icon
+                if(props.iconImage)
+                {
+                    //Set icon image
+                    marker.setIcon(props.iconImage);
+                }
+                
+                //Check content
+                if(props.content)
+                {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
+                    marker.addListener('click',function(){
+                        infoWindow.open(map, marker);
+                    });
+                }
+            }
+            /*
+            /--*Add marker--/
+            var marker = new google.maps.Marker({
+                position:{lat: 21.027763, lng: 105.834160},
+                map: map,
+                icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+            });
+
+            var infoWindow = new google.maps.InfoWindow({
+                content:'<h1>Idk</h1>'
+            });
+            marker.addListener('click',function(){
+                infoWindow.open(map, marker);
+            });
+            */
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeashyf0KO9RnyvGAvFk3huvSmwOBT-AM&callback=initMap"></script>
+</body>
+</html>
