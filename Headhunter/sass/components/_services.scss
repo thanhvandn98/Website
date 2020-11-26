@@ -1,0 +1,57 @@
+.service-box {
+    background-color: $color-white;
+    font-size: $font-size-default;
+    padding: 3rem 2rem;
+    border-radius: .3rem;
+    @include dropShadow;
+    text-align: center;
+    transition: all .3s;
+
+    &__icon {   
+        width: 8rem;
+    }
+
+    &__list-more {
+        display: block;
+        padding: .5rem 1rem;
+        transition: all .4s;
+        
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+            transition: all .4s; 
+        }
+
+        &:last-child {
+            margin-bottom: 5.6rem;
+        }
+    }
+
+    
+
+    
+
+    &__list-more:hover {
+        background:#f5f5f5;
+    }
+
+    &__list {
+        list-style: none;
+
+        &--name {
+            display: block;
+            float: left;
+
+        }
+
+        &--price {
+            display: block;
+            float: right;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-1rem);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    }
+
+}

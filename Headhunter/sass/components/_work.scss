@@ -1,0 +1,41 @@
+.work-list {
+    width: 100%;
+
+
+    &__all {
+        width: 100%;
+    }
+
+    &__shape {
+        float: left;
+        list-style: none;
+        width: 25%;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            float: left;
+            padding-top: 100%;
+        }
+
+    }
+
+    &__photo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all .4s;
+        
+        
+
+        &:hover {
+            transform: scale(1.1) rotate(3deg);
+            filter: brightness(.7);
+        }
+    
+    }
+}

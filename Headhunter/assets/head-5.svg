@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="71" viewBox="0 0 48 71">
+  <defs>
+    <filter id="Rectangle_15" x="-9" y="-6" width="66" height="89" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#806b3c" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_15)">
+        <rect id="Rectangle_15-2" data-name="Rectangle 15" width="48" height="71" transform="translate(491 1417.63)" fill="#806b3c"/>
+      </g>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-491 -1417.63)" clip-path="url(#clip-path)">
+    <path id="beauty" d="M31.055,19.127a8.471,8.471,0,0,0,10.773-.99L48,11.966,46.006,9.972,41.828,14.15,40.5,12.82l4.178-4.178L42.682,6.647,38.5,10.825,37.174,9.5l4.178-4.178L39.358,3.324,35.18,7.5l-1.33-1.33,4.178-4.178L36.034,0,29.862,6.171a8.474,8.474,0,0,0-.835,10.995L18.164,28.03H2.69V30.85H5.281a18.507,18.507,0,0,0,2.342,7.721L0,46.194l1.994,1.994,7.229-7.229a18.619,18.619,0,0,0,14.646,7.122H24.1A18.666,18.666,0,0,0,42.684,30.85h2.591V28.03H22.153Zm.8-10.961,7.978,7.978a5.641,5.641,0,0,1-7.978-7.978ZM24.1,45.261h-.226a15.839,15.839,0,0,1-14.16-8.77H38.255a15.838,15.838,0,0,1-14.16,8.77Zm15.245-11.59H8.624a15.7,15.7,0,0,1-.512-2.821H39.853A15.7,15.7,0,0,1,39.341,33.671Zm0,0" transform="translate(491 1429.036)" fill="#806b3c"/>
+  </g>
+</svg>

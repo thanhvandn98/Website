@@ -1,0 +1,49 @@
+
+.navigation {
+    height: 25%;
+    padding: 1rem;
+    &__logo {
+        margin-bottom: 3rem;
+    }
+    &__mainlogo {
+        font-size: 4rem;
+        color: $color-primary-dark;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+    }
+    &__sublogo {
+        font-size: $font-size-default;
+        color: $color-primary-light;
+        letter-spacing: .1rem;
+        text-transform: capitalize;
+        margin-top: -.5rem;
+    }
+
+    &__item  {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 4rem;
+        }
+    }
+    &__link {
+        &:link,
+        &:visited { 
+            display: inline-block;
+            font-size: 2rem;
+            color: $color-primary-dark;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: all .4s;
+            border-top: .2rem solid transparent; 
+           
+            
+                    
+        }
+        &:hover,
+        &:active {
+            border-bottom: .2rem solid $color-primary-light;
+            
+        }
+    }
+}
+

@@ -1,0 +1,47 @@
+.stylists-story {
+    @include dropShadow;
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgba($color-white, .6);
+    padding: 4rem 5rem;
+    font-size: $font-size-default;
+    position: relative;
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+
+
+    &:not(:last-child) {
+        margin-bottom: 5rem;
+    }
+
+
+    &__shape {
+        height: 15rem;
+        width: 15rem;
+        margin-right: 4rem;
+        float: left;
+        
+    }
+
+    &__photo {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__content {
+
+        &--name {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: .5rem;
+        }
+
+        &--des {
+            display: block;
+            overflow: hidden;
+        }
+    }
+}

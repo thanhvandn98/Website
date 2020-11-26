@@ -1,0 +1,23 @@
+html {
+    //define 1rem = 10px
+    font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    border-top: .4rem solid $color-primary;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+br {
+    content: "A" !important;
+    display: block !important;
+    margin-bottom: 1.5rem !important;
+}

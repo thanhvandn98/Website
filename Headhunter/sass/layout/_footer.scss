@@ -1,0 +1,60 @@
+.footer {
+    background: #2B2B2B;
+    width: 100%;
+    padding: 2rem 0 3rem 0;
+    position: relative;
+
+
+    &__name {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__info {
+        list-style: none;
+        display: inline-block;
+        font-size: 3rem;
+        
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__menu {
+
+        
+
+        position: absolute;
+        transform: translate(0, 100%);
+
+        &--link-1 {
+            list-style: none;
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: capitalize;
+            
+            
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            
+
+            
+        }
+
+        &--link-2 {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        
+    }
+
+}

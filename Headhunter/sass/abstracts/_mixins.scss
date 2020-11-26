@@ -1,0 +1,18 @@
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin dropShadow {
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+}

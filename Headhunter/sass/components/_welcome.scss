@@ -1,0 +1,52 @@
+.welcome {
+
+    &__text {
+        font-size: $font-size-default;
+        letter-spacing: .05rem;
+    }
+
+}
+
+.photo {
+    position: relative;
+
+    &__composition {
+        @include dropShadow;
+        border-radius: .2rem;
+        width: 45%;
+        transition: all .4s;
+        outline-offset: 1rem;
+        
+
+        &--p1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &--p2 {
+            position: absolute;
+            top: 2rem;
+            right: 1rem;
+        }
+
+        &--p3 {
+            position: absolute;
+            top: 5rem;
+            right: 15rem;
+        }
+
+        &:hover {
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 99;
+            outline: 1rem solid $color-primary;
+        }
+    }
+
+    &:hover &__composition:not(:hover) {
+        transform: scale(.9);
+    }
+
+
+}
