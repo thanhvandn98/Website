@@ -8,13 +8,14 @@ const UseRefBasics = () => {
   const refContainer = useRef(null)
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(refContainer.current.value)
   }
   return (
     <React.Fragment>
       <form action="" className="form" onSubmit={handleSubmit}>
         <div>
           <input type="text" ref={refContainer}/>
-          <button type='button'>Submit button</button>
+          <button type='submit'>Submit button</button>
         </div>
       </form>
     </React.Fragment>

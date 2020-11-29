@@ -1,0 +1,994 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <!-- RD version: 0.42.0  -->
+    <!--  filepage  -->
+  <meta charset="utf-8">
+          
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <!-- meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" -->
+
+
+	<title>File: lex.c.blt [Ruby 2.7.1]</title>
+  <link rel="stylesheet" href="./css/associated.css" type="text/css" >
+  <link rel="stylesheet" href="./css/inuit.css" >
+  <link rel="stylesheet" href="./css/grid.inuit.css" >
+  <link rel="stylesheet" href="./css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="./css/rdoc.css" type="text/css" >
+    <link rel="stylesheet" href="./css/carbon17.css" type="text/css" >
+
+  <!-- rel_prefix  = '' -->
+    
+    <!-- WHY? -->
+    
+    
+  <!-- rel_prefix = '.'   asset_rel_prefix = '.'  --> 
+  <link rel="stylesheet" href="css/extra.css" type="text/css" >
+  <script  src="/js/extra.js"  ></script>
+
+
+</head>
+
+<body class="file">
+<div id='actionbar' >
+<div class='wrapper'>
+<ul class='grids g0'></ul></div>
+
+
+
+</div> <!-- end action bar -->
+<!-- VERSION HEADER for 2.7.1 NOT FOUND -->          <div class='wrapper'>
+<!-- carbon17 added here 2017-09-09 -->
+ 
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <header>
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+      </header>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./_lib/racc/rdoc/grammar_en_rdoc.html">grammar.en.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./_test/rdoc/test_ja_rdoc.html">test.ja.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./COPYING_ja.html">COPYING.ja</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./README_EXT.html">README.EXT</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./README_EXT_ja.html">README.EXT.ja</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./configure_ac.html">configure.ac</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/bug_triaging_rdoc.html">bug_triaging.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/contributing_rdoc.html">contributing.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/contributors_rdoc.html">contributors.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/dtrace_probes_rdoc.html">dtrace_probes.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/extension_ja_rdoc.html">extension.ja.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/extension_rdoc.html">extension.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/globals_rdoc.html">globals.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/keywords_rdoc.html">keywords.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/maintainers_rdoc.html">maintainers.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/marshal_rdoc.html">marshal.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/regexp_rdoc.html">regexp.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/security_rdoc.html">security.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/signals_rdoc.html">signals.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/standard_library_rdoc.html">standard_library.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax_rdoc.html">syntax.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/assignment_rdoc.html">assignment.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/calling_methods_rdoc.html">calling_methods.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/comments_rdoc.html">comments.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/control_expressions_rdoc.html">control_expressions.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/exceptions_rdoc.html">exceptions.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/literals_rdoc.html">literals.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/methods_rdoc.html">methods.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/miscellaneous_rdoc.html">miscellaneous.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/modules_and_classes_rdoc.html">modules_and_classes.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/precedence_rdoc.html">precedence.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./doc/syntax/refinements_rdoc.html">refinements.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./lex_c_blt.html">lex.c.blt</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./sample/drb/README_ja_rdoc.html">README.ja.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="./sample/drb/README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" ></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value="" class="quicksearch-field" >
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ARGF.html">ARGF</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ArgumentError.html">ArgumentError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Array.html">Array</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./BasicObject.html">BasicObject</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Binding.html">Binding</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Class.html">Class</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ClosedQueueError.html">ClosedQueueError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Comparable.html">Comparable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Complex.html">Complex</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ConditionVariable.html">ConditionVariable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Continuation.html">Continuation</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Data.html">Data</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Dir.html">Dir</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ENV.html">ENV</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./EOFError.html">EOFError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Encoding.html">Encoding</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Encoding/CompatibilityError.html">Encoding::CompatibilityError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Encoding/Converter.html">Encoding::Converter</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./EncodingError.html">EncodingError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Enumerable.html">Enumerable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Enumerator.html">Enumerator</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Enumerator/ArithmeticSequence.html">Enumerator::ArithmeticSequence</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Enumerator/Chain.html">Enumerator::Chain</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Enumerator/Generator.html">Enumerator::Generator</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Enumerator/Lazy.html">Enumerator::Lazy</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Enumerator/Producer.html">Enumerator::Producer</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Errno.html">Errno</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Exception.html">Exception</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./FalseClass.html">FalseClass</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Fiber.html">Fiber</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./FiberError.html">FiberError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./File.html">File</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./File/Constants.html">File::Constants</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./File/Stat.html">File::Stat</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./FileTest.html">FileTest</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Float.html">Float</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./FloatDomainError.html">FloatDomainError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./FrozenError.html">FrozenError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./GC.html">GC</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./GC/Profiler.html">GC::Profiler</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Hash.html">Hash</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IO.html">IO</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IO/EAGAINWaitReadable.html">IO::EAGAINWaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IO/EAGAINWaitWritable.html">IO::EAGAINWaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IO/EINPROGRESSWaitReadable.html">IO::EINPROGRESSWaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IO/EINPROGRESSWaitWritable.html">IO::EINPROGRESSWaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IO/EWOULDBLOCKWaitReadable.html">IO::EWOULDBLOCKWaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IO/EWOULDBLOCKWaitWritable.html">IO::EWOULDBLOCKWaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IO/WaitReadable.html">IO::WaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IO/WaitWritable.html">IO::WaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IOError.html">IOError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./IndexError.html">IndexError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Integer.html">Integer</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Interrupt.html">Interrupt</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Kernel.html">Kernel</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./KeyError.html">KeyError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./LoadError.html">LoadError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./LocalJumpError.html">LocalJumpError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Marshal.html">Marshal</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./MatchData.html">MatchData</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Math.html">Math</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Math/DomainError.html">Math::DomainError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Method.html">Method</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Module.html">Module</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Mutex.html">Mutex</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./NameError.html">NameError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./NilClass.html">NilClass</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./NoMatchingPatternError.html">NoMatchingPatternError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./NoMemoryError.html">NoMemoryError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./NoMethodError.html">NoMethodError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./NotImplementedError.html">NotImplementedError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Numeric.html">Numeric</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Object.html">Object</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ObjectSpace.html">ObjectSpace</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ObjectSpace/WeakMap.html">ObjectSpace::WeakMap</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Pool.html">Pool</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Proc.html">Proc</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Process.html">Process</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Process/GID.html">Process::GID</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Process/Status.html">Process::Status</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Process/Sys.html">Process::Sys</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Process/UID.html">Process::UID</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Queue.html">Queue</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Random.html">Random</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Random/Formatter.html">Random::Formatter</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Range.html">Range</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./RangeError.html">RangeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Rational.html">Rational</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Regexp.html">Regexp</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./RegexpError.html">RegexpError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Ripper.html">Ripper</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./RubyVM.html">RubyVM</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./RubyVM/AbstractSyntaxTree.html">RubyVM::AbstractSyntaxTree</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./RubyVM/AbstractSyntaxTree/Node.html">RubyVM::AbstractSyntaxTree::Node</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./RubyVM/MJIT.html">RubyVM::MJIT</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./RuntimeError.html">RuntimeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ScriptError.html">ScriptError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./SecurityError.html">SecurityError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Signal.html">Signal</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./SignalException.html">SignalException</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./SizedQueue.html">SizedQueue</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./StandardError.html">StandardError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./StopIteration.html">StopIteration</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./String.html">String</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Struct.html">Struct</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Symbol.html">Symbol</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./SyntaxError.html">SyntaxError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./SystemCallError.html">SystemCallError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./SystemExit.html">SystemExit</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./SystemStackError.html">SystemStackError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Thread.html">Thread</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Thread/Backtrace/Location.html">Thread::Backtrace::Location</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ThreadError.html">ThreadError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ThreadGroup.html">ThreadGroup</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Time.html">Time</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./TracePoint.html">TracePoint</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./TrueClass.html">TrueClass</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./TypeError.html">TypeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./UnboundMethod.html">UnboundMethod</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./UncaughtThrowError.html">UncaughtThrowError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./UnicodeNormalize.html">UnicodeNormalize</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./Warning.html">Warning</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./ZeroDivisionError.html">ZeroDivisionError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./fatal.html">fatal</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="./unknown.html">unknown</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+  <div class='adzbox'  id="azk83167">
+      
+  </div> 
+	<div id="documentation">
+		
+<pre>ANSI-C code produced by gperf version 3.1   
+Command-line: gperf -C -P -p -j1 -i 1 -g -o -t -N rb_reserved_word -k&#39;1,3,$&#39; defs/keywords</pre>
+
+<p>if !((&#39; &#39; == 32) &amp;&amp; (&#39;!&#39; == 33) &amp;&amp;
+(&#39;“&#39; == 34) &amp;&amp; (&#39;#&#39; == 35) \</p>
+
+<pre>&amp;&amp; (&#39;%&#39; == 37) &amp;&amp; (&#39;&amp;&#39; == 38) &amp;&amp; (&#39;\&#39;&#39; == 39) &amp;&amp; (&#39;(&#39; == 40) \
+&amp;&amp; (&#39;)&#39; == 41) &amp;&amp; (&#39;*&#39; == 42) &amp;&amp; (&#39;+&#39; == 43) &amp;&amp; (&#39;,&#39; == 44) \
+&amp;&amp; (&#39;-&#39; == 45) &amp;&amp; (&#39;.&#39; == 46) &amp;&amp; (&#39;/&#39; == 47) &amp;&amp; (&#39;0&#39; == 48) \
+&amp;&amp; (&#39;1&#39; == 49) &amp;&amp; (&#39;2&#39; == 50) &amp;&amp; (&#39;3&#39; == 51) &amp;&amp; (&#39;4&#39; == 52) \
+&amp;&amp; (&#39;5&#39; == 53) &amp;&amp; (&#39;6&#39; == 54) &amp;&amp; (&#39;7&#39; == 55) &amp;&amp; (&#39;8&#39; == 56) \
+&amp;&amp; (&#39;9&#39; == 57) &amp;&amp; (&#39;:&#39; == 58) &amp;&amp; (&#39;;&#39; == 59) &amp;&amp; (&#39;&lt;&#39; == 60) \
+&amp;&amp; (&#39;=&#39; == 61) &amp;&amp; (&#39;&gt;&#39; == 62) &amp;&amp; (&#39;?&#39; == 63) &amp;&amp; (&#39;A&#39; == 65) \
+&amp;&amp; (&#39;B&#39; == 66) &amp;&amp; (&#39;C&#39; == 67) &amp;&amp; (&#39;D&#39; == 68) &amp;&amp; (&#39;E&#39; == 69) \
+&amp;&amp; (&#39;F&#39; == 70) &amp;&amp; (&#39;G&#39; == 71) &amp;&amp; (&#39;H&#39; == 72) &amp;&amp; (&#39;I&#39; == 73) \
+&amp;&amp; (&#39;J&#39; == 74) &amp;&amp; (&#39;K&#39; == 75) &amp;&amp; (&#39;L&#39; == 76) &amp;&amp; (&#39;M&#39; == 77) \
+&amp;&amp; (&#39;N&#39; == 78) &amp;&amp; (&#39;O&#39; == 79) &amp;&amp; (&#39;P&#39; == 80) &amp;&amp; (&#39;Q&#39; == 81) \
+&amp;&amp; (&#39;R&#39; == 82) &amp;&amp; (&#39;S&#39; == 83) &amp;&amp; (&#39;T&#39; == 84) &amp;&amp; (&#39;U&#39; == 85) \
+&amp;&amp; (&#39;V&#39; == 86) &amp;&amp; (&#39;W&#39; == 87) &amp;&amp; (&#39;X&#39; == 88) &amp;&amp; (&#39;Y&#39; == 89) \
+&amp;&amp; (&#39;Z&#39; == 90) &amp;&amp; (&#39;[&#39; == 91) &amp;&amp; (&#39;\\&#39; == 92) &amp;&amp; (&#39;]&#39; == 93) \
+&amp;&amp; (&#39;^&#39; == 94) &amp;&amp; (&#39;_&#39; == 95) &amp;&amp; (&#39;a&#39; == 97) &amp;&amp; (&#39;b&#39; == 98) \
+&amp;&amp; (&#39;c&#39; == 99) &amp;&amp; (&#39;d&#39; == 100) &amp;&amp; (&#39;e&#39; == 101) &amp;&amp; (&#39;f&#39; == 102) \
+&amp;&amp; (&#39;g&#39; == 103) &amp;&amp; (&#39;h&#39; == 104) &amp;&amp; (&#39;i&#39; == 105) &amp;&amp; (&#39;j&#39; == 106) \
+&amp;&amp; (&#39;k&#39; == 107) &amp;&amp; (&#39;l&#39; == 108) &amp;&amp; (&#39;m&#39; == 109) &amp;&amp; (&#39;n&#39; == 110) \
+&amp;&amp; (&#39;o&#39; == 111) &amp;&amp; (&#39;p&#39; == 112) &amp;&amp; (&#39;q&#39; == 113) &amp;&amp; (&#39;r&#39; == 114) \
+&amp;&amp; (&#39;s&#39; == 115) &amp;&amp; (&#39;t&#39; == 116) &amp;&amp; (&#39;u&#39; == 117) &amp;&amp; (&#39;v&#39; == 118) \
+&amp;&amp; (&#39;w&#39; == 119) &amp;&amp; (&#39;x&#39; == 120) &amp;&amp; (&#39;y&#39; == 121) &amp;&amp; (&#39;z&#39; == 122) \
+&amp;&amp; (&#39;{&#39; == 123) &amp;&amp; (&#39;|&#39; == 124) &amp;&amp; (&#39;}&#39; == 125) &amp;&amp; (&#39;~&#39; == 126))</pre>
+
+<p>/* The character set is not based on ISO-646.  */ error “gperf generated
+tables don&#39;t work with this execution character set. Please report a
+bug to &lt;bug-gperf@gnu.org&gt;.” endif</p>
+
+<p>define gperf_offsetof(s, n) (short)offsetof(struct s##_t, s##_str##n) line
+1 “defs/keywords”</p>
+
+<p>struct kwtable {short name, <a href="2">id</a>, state;}; const struct
+kwtable *rb_reserved_word(const char *, unsigned int); ifndef RIPPER static
+const struct kwtable *reserved_word(/*const char *, unsigned int*/); define
+rb_reserved_word(str, len) reserved_word(str, len) line 9 “defs/keywords”
+struct kwtable;</p>
+
+<p>define TOTAL_KEYWORDS 41 define MIN_WORD_LENGTH 2 define MAX_WORD_LENGTH 12
+define MIN_HASH_VALUE 8 define MAX_HASH_VALUE 50 /* maximum key range = 43,
+duplicates = 0 */</p>
+
+<p>ifdef __GNUC__ __inline else ifdef __cplusplus inline endif endif static
+unsigned int hash (register const char *str, register size_t len) {</p>
+
+<pre>static const unsigned char asso_values[] =
+  {
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 26, 51, 51, 14, 51, 16,  8,
+    11, 13, 51, 51, 51, 51, 10, 51, 13, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 11, 51, 13,  1, 26,
+     4,  1,  8, 28, 51, 23, 51,  1,  1, 27,
+     5, 19, 21, 51,  8,  3,  3, 11, 51, 21,
+    24, 16, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51, 51, 51, 51, 51,
+    51, 51, 51, 51, 51, 51
+  };
+register unsigned int hval = (unsigned int)len;
+
+switch (hval)
+  {
+    default:
+      hval += asso_values[(unsigned char)str[2]];
+    /*FALLTHROUGH*/
+    case 2:
+    case 1:
+      hval += asso_values[(unsigned char)str[0]];
+      break;
+  }
+return (unsigned int)hval + asso_values[(unsigned char)str[len - 1]];</pre>
+
+<p>}</p>
+
+<p>struct stringpool_t</p>
+
+<pre>{
+  char stringpool_str8[sizeof(&quot;break&quot;)];
+  char stringpool_str9[sizeof(&quot;else&quot;)];
+  char stringpool_str10[sizeof(&quot;nil&quot;)];
+  char stringpool_str11[sizeof(&quot;ensure&quot;)];
+  char stringpool_str12[sizeof(&quot;end&quot;)];
+  char stringpool_str13[sizeof(&quot;then&quot;)];
+  char stringpool_str14[sizeof(&quot;not&quot;)];
+  char stringpool_str15[sizeof(&quot;false&quot;)];
+  char stringpool_str16[sizeof(&quot;self&quot;)];
+  char stringpool_str17[sizeof(&quot;elsif&quot;)];
+  char stringpool_str18[sizeof(&quot;rescue&quot;)];
+  char stringpool_str19[sizeof(&quot;true&quot;)];
+  char stringpool_str20[sizeof(&quot;until&quot;)];
+  char stringpool_str21[sizeof(&quot;unless&quot;)];
+  char stringpool_str22[sizeof(&quot;return&quot;)];
+  char stringpool_str23[sizeof(&quot;def&quot;)];
+  char stringpool_str24[sizeof(&quot;and&quot;)];
+  char stringpool_str25[sizeof(&quot;do&quot;)];
+  char stringpool_str26[sizeof(&quot;yield&quot;)];
+  char stringpool_str27[sizeof(&quot;for&quot;)];
+  char stringpool_str28[sizeof(&quot;undef&quot;)];
+  char stringpool_str29[sizeof(&quot;or&quot;)];
+  char stringpool_str30[sizeof(&quot;in&quot;)];
+  char stringpool_str31[sizeof(&quot;when&quot;)];
+  char stringpool_str32[sizeof(&quot;retry&quot;)];
+  char stringpool_str33[sizeof(&quot;if&quot;)];
+  char stringpool_str34[sizeof(&quot;case&quot;)];
+  char stringpool_str35[sizeof(&quot;redo&quot;)];
+  char stringpool_str36[sizeof(&quot;next&quot;)];
+  char stringpool_str37[sizeof(&quot;super&quot;)];
+  char stringpool_str38[sizeof(&quot;module&quot;)];
+  char stringpool_str39[sizeof(&quot;begin&quot;)];
+  char stringpool_str40[sizeof(&quot;__LINE__&quot;)];
+  char stringpool_str41[sizeof(&quot;__FILE__&quot;)];
+  char stringpool_str42[sizeof(&quot;__ENCODING__&quot;)];
+  char stringpool_str43[sizeof(&quot;END&quot;)];
+  char stringpool_str44[sizeof(&quot;alias&quot;)];
+  char stringpool_str45[sizeof(&quot;BEGIN&quot;)];
+  char stringpool_str46[sizeof(&quot;defined?&quot;)];
+  char stringpool_str47[sizeof(&quot;class&quot;)];
+  char stringpool_str50[sizeof(&quot;while&quot;)];
+};</pre>
+
+<p>static const struct stringpool_t stringpool_contents =</p>
+
+<pre>{
+  &quot;break&quot;,
+  &quot;else&quot;,
+  &quot;nil&quot;,
+  &quot;ensure&quot;,
+  &quot;end&quot;,
+  &quot;then&quot;,
+  &quot;not&quot;,
+  &quot;false&quot;,
+  &quot;self&quot;,
+  &quot;elsif&quot;,
+  &quot;rescue&quot;,
+  &quot;true&quot;,
+  &quot;until&quot;,
+  &quot;unless&quot;,
+  &quot;return&quot;,
+  &quot;def&quot;,
+  &quot;and&quot;,
+  &quot;do&quot;,
+  &quot;yield&quot;,
+  &quot;for&quot;,
+  &quot;undef&quot;,
+  &quot;or&quot;,
+  &quot;in&quot;,
+  &quot;when&quot;,
+  &quot;retry&quot;,
+  &quot;if&quot;,
+  &quot;case&quot;,
+  &quot;redo&quot;,
+  &quot;next&quot;,
+  &quot;super&quot;,
+  &quot;module&quot;,
+  &quot;begin&quot;,
+  &quot;__LINE__&quot;,
+  &quot;__FILE__&quot;,
+  &quot;__ENCODING__&quot;,
+  &quot;END&quot;,
+  &quot;alias&quot;,
+  &quot;BEGIN&quot;,
+  &quot;defined?&quot;,
+  &quot;class&quot;,
+  &quot;while&quot;
+};</pre>
+
+<p>define stringpool ((const char *) &amp;stringpool_contents) const struct
+kwtable * rb_reserved_word (register const char *str, register size_t len)
+{</p>
+
+<pre>static const struct kwtable wordlist[] =
+  {
+    {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1},</pre>
+
+<p>line 19 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 8), {keyword_break, keyword_break}, EXPR_MID},</pre>
+
+<p>line 25 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 9), {keyword_else, keyword_else}, EXPR_BEG},</pre>
+
+<p>line 35 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 10), {keyword_nil, keyword_nil}, EXPR_END},</pre>
+
+<p>line 28 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 11), {keyword_ensure, keyword_ensure}, EXPR_BEG},</pre>
+
+<p>line 27 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 12), {keyword_end, keyword_end}, EXPR_END},</pre>
+
+<p>line 44 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 13), {keyword_then, keyword_then}, EXPR_BEG},</pre>
+
+<p>line 36 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 14), {keyword_not, keyword_not}, EXPR_ARG},</pre>
+
+<p>line 29 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 15), {keyword_false, keyword_false}, EXPR_END},</pre>
+
+<p>line 42 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 16), {keyword_self, keyword_self}, EXPR_END},</pre>
+
+<p>line 26 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 17), {keyword_elsif, keyword_elsif}, EXPR_VALUE},</pre>
+
+<p>line 39 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 18), {keyword_rescue, modifier_rescue}, EXPR_MID},</pre>
+
+<p>line 45 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 19), {keyword_true, keyword_true}, EXPR_END},</pre>
+
+<p>line 48 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 20), {keyword_until, modifier_until}, EXPR_VALUE},</pre>
+
+<p>line 47 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 21), {keyword_unless, modifier_unless}, EXPR_VALUE},</pre>
+
+<p>line 41 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 22), {keyword_return, keyword_return}, EXPR_MID},</pre>
+
+<p>line 22 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 23), {keyword_def, keyword_def}, EXPR_FNAME},</pre>
+
+<p>line 17 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 24), {keyword_and, keyword_and}, EXPR_VALUE},</pre>
+
+<p>line 24 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 25), {keyword_do, keyword_do}, EXPR_BEG},</pre>
+
+<p>line 51 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 26), {keyword_yield, keyword_yield}, EXPR_ARG},</pre>
+
+<p>line 30 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 27), {keyword_for, keyword_for}, EXPR_VALUE},</pre>
+
+<p>line 46 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 28), {keyword_undef, keyword_undef}, EXPR_FNAME|EXPR_FITEM},</pre>
+
+<p>line 37 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 29), {keyword_or, keyword_or}, EXPR_VALUE},</pre>
+
+<p>line 32 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 30), {keyword_in, keyword_in}, EXPR_VALUE},</pre>
+
+<p>line 49 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 31), {keyword_when, keyword_when}, EXPR_VALUE},</pre>
+
+<p>line 40 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 32), {keyword_retry, keyword_retry}, EXPR_END},</pre>
+
+<p>line 31 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 33), {keyword_if, modifier_if}, EXPR_VALUE},</pre>
+
+<p>line 20 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 34), {keyword_case, keyword_case}, EXPR_VALUE},</pre>
+
+<p>line 38 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 35), {keyword_redo, keyword_redo}, EXPR_END},</pre>
+
+<p>line 34 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 36), {keyword_next, keyword_next}, EXPR_MID},</pre>
+
+<p>line 43 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 37), {keyword_super, keyword_super}, EXPR_ARG},</pre>
+
+<p>line 33 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 38), {keyword_module, keyword_module}, EXPR_VALUE},</pre>
+
+<p>line 18 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 39), {keyword_begin, keyword_begin}, EXPR_BEG},</pre>
+
+<p>line 12 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 40), {keyword__LINE__, keyword__LINE__}, EXPR_END},</pre>
+
+<p>line 13 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 41), {keyword__FILE__, keyword__FILE__}, EXPR_END},</pre>
+
+<p>line 11 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 42), {keyword__ENCODING__, keyword__ENCODING__}, EXPR_END},</pre>
+
+<p>line 15 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 43), {keyword_END, keyword_END}, EXPR_END},</pre>
+
+<p>line 16 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 44), {keyword_alias, keyword_alias}, EXPR_FNAME|EXPR_FITEM},</pre>
+
+<p>line 14 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 45), {keyword_BEGIN, keyword_BEGIN}, EXPR_END},</pre>
+
+<p>line 23 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 46), {keyword_defined, keyword_defined}, EXPR_ARG},</pre>
+
+<p>line 21 “defs/keywords”</p>
+
+<pre>{gperf_offsetof(stringpool, 47), {keyword_class, keyword_class}, EXPR_CLASS},
+{-1}, {-1},</pre>
+
+<p>line 50 “defs/keywords”</p>
+
+<pre>    {gperf_offsetof(stringpool, 50), {keyword_while, modifier_while}, EXPR_VALUE}
+  };
+
+if (len &lt;= MAX_WORD_LENGTH &amp;&amp; len &gt;= MIN_WORD_LENGTH)
+  {
+    register unsigned int key = hash (str, len);
+
+    if (key &lt;= MAX_HASH_VALUE)
+      {
+        register int o = wordlist[key].name;
+        if (o &gt;= 0)
+          {
+            register const char *s = o + stringpool;
+
+            if (*str == *s &amp;&amp; !strcmp (str + 1, s + 1))
+              return &amp;wordlist[key];
+          }
+      }
+  }
+return 0;</pre>
+
+<p>} line 52 “defs/keywords”</p>
+
+<p>endif</p>
+
+	</div>
+
+
+                <div id="footer">
+                
+                <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>, purveyors of fine dance noise.  <div class='oio-inline'><ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script></div></p>
+
+                
+                <p id="validator-badges"><small>Generated with Rubydoc Rdoc Generator 0.42.0</small>.</p>
+              </div>
+
+
+    
+
+
+</body>
+
+</html>
+

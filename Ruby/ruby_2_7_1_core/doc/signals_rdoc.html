@@ -1,0 +1,771 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <!-- RD version: 0.42.0  -->
+    <!--  filepage  -->
+  <meta charset="utf-8">
+          
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <!-- meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" -->
+
+
+	<title>File: signals.rdoc [Ruby 2.7.1]</title>
+  <link rel="stylesheet" href="../css/associated.css" type="text/css" >
+  <link rel="stylesheet" href="../css/inuit.css" >
+  <link rel="stylesheet" href="../css/grid.inuit.css" >
+  <link rel="stylesheet" href="../css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="../css/rdoc.css" type="text/css" >
+    <link rel="stylesheet" href="../css/carbon17.css" type="text/css" >
+
+  <!-- rel_prefix  = '..' -->
+    
+  <!-- rel_prefix = '..'   asset_rel_prefix = '..'  --> 
+  <link rel="stylesheet" href="css/extra.css" type="text/css" >
+  <script  src="/js/extra.js"  ></script>
+
+
+</head>
+
+<body class="file">
+<div id='actionbar' >
+<div class='wrapper'>
+<ul class='grids g0'></ul></div>
+
+
+
+</div> <!-- end action bar -->
+<!-- VERSION HEADER for 2.7.1 NOT FOUND -->          <div class='wrapper'>
+<!-- carbon17 added here 2017-09-09 -->
+ 
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <header>
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+      </header>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../_lib/racc/rdoc/grammar_en_rdoc.html">grammar.en.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../_test/rdoc/test_ja_rdoc.html">test.ja.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../COPYING_ja.html">COPYING.ja</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../README_EXT.html">README.EXT</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../README_EXT_ja.html">README.EXT.ja</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../configure_ac.html">configure.ac</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/bug_triaging_rdoc.html">bug_triaging.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/contributing_rdoc.html">contributing.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/contributors_rdoc.html">contributors.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/dtrace_probes_rdoc.html">dtrace_probes.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/extension_ja_rdoc.html">extension.ja.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/extension_rdoc.html">extension.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/globals_rdoc.html">globals.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/keywords_rdoc.html">keywords.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/maintainers_rdoc.html">maintainers.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/marshal_rdoc.html">marshal.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/regexp_rdoc.html">regexp.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/security_rdoc.html">security.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/signals_rdoc.html">signals.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/standard_library_rdoc.html">standard_library.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax_rdoc.html">syntax.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/assignment_rdoc.html">assignment.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/calling_methods_rdoc.html">calling_methods.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/comments_rdoc.html">comments.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/control_expressions_rdoc.html">control_expressions.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/exceptions_rdoc.html">exceptions.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/literals_rdoc.html">literals.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/methods_rdoc.html">methods.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/miscellaneous_rdoc.html">miscellaneous.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/modules_and_classes_rdoc.html">modules_and_classes.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/precedence_rdoc.html">precedence.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../doc/syntax/refinements_rdoc.html">refinements.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../lex_c_blt.html">lex.c.blt</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../sample/drb/README_ja_rdoc.html">README.ja.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../sample/drb/README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" ></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value="" class="quicksearch-field" >
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ARGF.html">ARGF</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ArgumentError.html">ArgumentError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Array.html">Array</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../BasicObject.html">BasicObject</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Binding.html">Binding</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Class.html">Class</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ClosedQueueError.html">ClosedQueueError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Comparable.html">Comparable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Complex.html">Complex</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ConditionVariable.html">ConditionVariable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Continuation.html">Continuation</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Data.html">Data</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Dir.html">Dir</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ENV.html">ENV</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../EOFError.html">EOFError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Encoding.html">Encoding</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Encoding/CompatibilityError.html">Encoding::CompatibilityError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Encoding/Converter.html">Encoding::Converter</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../EncodingError.html">EncodingError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Enumerable.html">Enumerable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Enumerator.html">Enumerator</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Enumerator/ArithmeticSequence.html">Enumerator::ArithmeticSequence</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Enumerator/Chain.html">Enumerator::Chain</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Enumerator/Generator.html">Enumerator::Generator</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Enumerator/Lazy.html">Enumerator::Lazy</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Enumerator/Producer.html">Enumerator::Producer</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Errno.html">Errno</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Exception.html">Exception</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../FalseClass.html">FalseClass</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Fiber.html">Fiber</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../FiberError.html">FiberError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../File.html">File</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../File/Constants.html">File::Constants</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../File/Stat.html">File::Stat</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../FileTest.html">FileTest</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Float.html">Float</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../FloatDomainError.html">FloatDomainError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../FrozenError.html">FrozenError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../GC.html">GC</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../GC/Profiler.html">GC::Profiler</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Hash.html">Hash</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IO.html">IO</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IO/EAGAINWaitReadable.html">IO::EAGAINWaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IO/EAGAINWaitWritable.html">IO::EAGAINWaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IO/EINPROGRESSWaitReadable.html">IO::EINPROGRESSWaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IO/EINPROGRESSWaitWritable.html">IO::EINPROGRESSWaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IO/EWOULDBLOCKWaitReadable.html">IO::EWOULDBLOCKWaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IO/EWOULDBLOCKWaitWritable.html">IO::EWOULDBLOCKWaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IO/WaitReadable.html">IO::WaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IO/WaitWritable.html">IO::WaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IOError.html">IOError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../IndexError.html">IndexError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Integer.html">Integer</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Interrupt.html">Interrupt</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Kernel.html">Kernel</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../KeyError.html">KeyError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../LoadError.html">LoadError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../LocalJumpError.html">LocalJumpError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Marshal.html">Marshal</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../MatchData.html">MatchData</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Math.html">Math</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Math/DomainError.html">Math::DomainError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Method.html">Method</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Module.html">Module</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Mutex.html">Mutex</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../NameError.html">NameError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../NilClass.html">NilClass</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../NoMatchingPatternError.html">NoMatchingPatternError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../NoMemoryError.html">NoMemoryError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../NoMethodError.html">NoMethodError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../NotImplementedError.html">NotImplementedError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Numeric.html">Numeric</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Object.html">Object</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ObjectSpace.html">ObjectSpace</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ObjectSpace/WeakMap.html">ObjectSpace::WeakMap</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Pool.html">Pool</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Proc.html">Proc</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Process.html">Process</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Process/GID.html">Process::GID</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Process/Status.html">Process::Status</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Process/Sys.html">Process::Sys</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Process/UID.html">Process::UID</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Queue.html">Queue</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Random.html">Random</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Random/Formatter.html">Random::Formatter</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Range.html">Range</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../RangeError.html">RangeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Rational.html">Rational</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Regexp.html">Regexp</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../RegexpError.html">RegexpError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Ripper.html">Ripper</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../RubyVM.html">RubyVM</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../RubyVM/AbstractSyntaxTree.html">RubyVM::AbstractSyntaxTree</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../RubyVM/AbstractSyntaxTree/Node.html">RubyVM::AbstractSyntaxTree::Node</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../RubyVM/MJIT.html">RubyVM::MJIT</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../RuntimeError.html">RuntimeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ScriptError.html">ScriptError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../SecurityError.html">SecurityError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Signal.html">Signal</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../SignalException.html">SignalException</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../SizedQueue.html">SizedQueue</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../StandardError.html">StandardError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../StopIteration.html">StopIteration</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../String.html">String</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Struct.html">Struct</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Symbol.html">Symbol</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../SyntaxError.html">SyntaxError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../SystemCallError.html">SystemCallError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../SystemExit.html">SystemExit</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../SystemStackError.html">SystemStackError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Thread.html">Thread</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Thread/Backtrace/Location.html">Thread::Backtrace::Location</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ThreadError.html">ThreadError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ThreadGroup.html">ThreadGroup</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Time.html">Time</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../TracePoint.html">TracePoint</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../TrueClass.html">TrueClass</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../TypeError.html">TypeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../UnboundMethod.html">UnboundMethod</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../UncaughtThrowError.html">UncaughtThrowError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../UnicodeNormalize.html">UnicodeNormalize</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../Warning.html">Warning</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../ZeroDivisionError.html">ZeroDivisionError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../fatal.html">fatal</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../unknown.html">unknown</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+  <div class='adzbox'  id="azk83167">
+      
+  </div> 
+	<div id="documentation">
+		
+<h1 id="label-Caveats+for+implementing+Signal.trap+callbacks">Caveats for implementing <a href="../Signal.html#method-c-trap">Signal.trap</a> callbacks<span><a href="#label-Caveats+for+implementing+Signal.trap+callbacks">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>As with implementing signal handlers in C or most other languages, all code
+passed to <a href="../Signal.html#method-c-trap">Signal.trap</a> must be
+reentrant.  If you are not familiar with reentrancy, you need to read up on
+it at <a
+href="https://en.wikipedia.org/wiki/Reentrancy_(computing)">Wikipedia</a>
+or elsewhere before reading the rest of this document.</p>
+
+<p>Most importantly, “thread-safety” does not guarantee reentrancy; and
+methods such as <a href="../Mutex.html#method-i-lock">Mutex#lock</a> and <a
+href="../Mutex.html#method-i-synchronize">Mutex#synchronize</a> which are
+commonly used for thread-safety even prevent reentrancy.</p>
+
+<h2 id="label-An+implementation+detail+of+the+Ruby+VM">An implementation detail of the Ruby VM<span><a href="#label-An+implementation+detail+of+the+Ruby+VM">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>The Ruby VM defers <a href="../Signal.html#method-c-trap">Signal.trap</a>
+callbacks from running until it is safe for its internal data structures,
+but it does not know when it is safe for data structures in YOUR code. 
+Ruby implements deferred signal handling by registering short C functions
+with only <a
+href="http://man7.org/linux/man-pages/man7/signal-safety.7.html">async-signal-safe
+functions</a> as signal handlers.  These short C functions only do enough
+tell the VM to run callbacks registered via <a
+href="../Signal.html#method-c-trap">Signal.trap</a> later in the main Ruby
+<a href="../Thread.html">Thread</a>.</p>
+
+<h2 id="label-Unsafe+methods+to+call+in+Signal.trap+blocks">Unsafe methods to call in <a href="../Signal.html#method-c-trap">Signal.trap</a> blocks<span><a href="#label-Unsafe+methods+to+call+in+Signal.trap+blocks">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>When in doubt, consider anything not listed as safe below as being unsafe.</p>
+<ul><li>
+<p><a href="../Mutex.html#method-i-lock">Mutex#lock</a>, <a
+href="../Mutex.html#method-i-synchronize">Mutex#synchronize</a> and any
+code using them are explicitly unsafe.  This includes Monitor in the
+standard library which uses <a href="../Mutex.html">Mutex</a> to provide
+reentrancy.</p>
+</li><li>
+<p><a href="../Dir.html#method-c-chdir">Dir.chdir</a> with block</p>
+</li><li>
+<p>any <a href="../IO.html">IO</a> write operations when <a
+href="../IO.html#method-i-sync">IO#sync</a> is false; including <a
+href="../IO.html#method-i-write">IO#write</a>, <a
+href="../IO.html#method-i-write_nonblock">IO#write_nonblock</a>, <a
+href="../IO.html#method-i-puts">IO#puts</a>. Pipes and sockets default to
+`IO#sync = true&#39;, so it is safe to write to them unless <a
+href="../IO.html#method-i-sync">IO#sync</a> was disabled.</p>
+</li><li>
+<p><a href="../File.html#method-i-flock">File#flock</a>, as the underlying
+flock(2) call is not specified by POSIX</p>
+</li></ul>
+
+<h2 id="label-Commonly+safe+operations+inside+Signal.trap+blocks">Commonly safe operations inside <a href="../Signal.html#method-c-trap">Signal.trap</a> blocks<span><a href="#label-Commonly+safe+operations+inside+Signal.trap+blocks">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Assignment and retrieval of local, instance, and class variables</p>
+</li><li>
+<p>Most object allocations and initializations of common types including <a
+href="../Array.html">Array</a>, <a href="../Hash.html">Hash</a>, <a
+href="../String.html">String</a>, <a href="../Struct.html">Struct</a>, <a
+href="../Time.html">Time</a>.</p>
+</li><li>
+<p>Common <a href="../Array.html">Array</a>, <a href="../Hash.html">Hash</a>,
+<a href="../String.html">String</a>, <a href="../Struct.html">Struct</a>
+operations which do not execute a block are generally safe; but beware if
+iteration is occurring elsewhere.</p>
+</li><li>
+<p><a href="../Hash.html#method-i-5B-5D">Hash#[]</a>, <a
+href="../Hash.html#method-i-5B-5D-3D">Hash#[]=</a> (unless <a
+href="../Hash.html#method-c-new">Hash.new</a> was given an unsafe block)</p>
+</li><li>
+<p>Thread::Queue#push and Thread::SizedQueue#push (since Ruby 2.1)</p>
+</li><li>
+<p>Creating a new <a href="../Thread.html">Thread</a> via <a
+href="../Thread.html#method-c-new">Thread.new</a>/Thread.start can used to
+get around the unusability of Mutexes inside a signal handler</p>
+</li><li>
+<p><a href="../Signal.html#method-c-trap">Signal.trap</a> is safe to use
+inside blocks passed to <a
+href="../Signal.html#method-c-trap">Signal.trap</a></p>
+</li><li>
+<p>arithmetic on <a href="../Integer.html">Integer</a> and <a
+href="../Float.html">Float</a> (`+&#39;, `-&#39;, &#39;%&#39;, &#39;*&#39;,
+&#39;/&#39;)</p>
+
+<p>Additionally, signal handlers do not run between two successive local
+variable accesses, so shortcuts such as `+=&#39; and `-=&#39; will not
+trigger a data race when used on <a href="../Integer.html">Integer</a> and
+<a href="../Float.html">Float</a> classes in signal handlers.</p>
+</li></ul>
+
+<h2 id="label-System+call+wrapper+methods+which+are+safe+inside+Signal.trap">System call wrapper methods which are safe inside <a href="../Signal.html#method-c-trap">Signal.trap</a><span><a href="#label-System+call+wrapper+methods+which+are+safe+inside+Signal.trap">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Since Ruby has wrappers around many <a
+href="http://man7.org/linux/man-pages/man7/signal-safety.7.html">async-signal-safe
+C functions</a> the corresponding wrappers for many <a
+href="../IO.html">IO</a>, <a href="../File.html">File</a>, <a
+href="../Dir.html">Dir</a>, and Socket methods are safe.</p>
+
+<p>(Incomplete list)</p>
+<ul><li>
+<p><a href="../Dir.html#method-c-chdir">Dir.chdir</a> (without block arg)</p>
+</li><li>
+<p><a href="../Dir.html#method-c-mkdir">Dir.mkdir</a></p>
+</li><li>
+<p><a href="../Dir.html#method-c-open">Dir.open</a></p>
+</li><li>
+<p><a href="../File.html#method-i-truncate">File#truncate</a></p>
+</li><li>
+<p><a href="../File.html#method-c-link">File.link</a></p>
+</li><li>
+<p><a href="../File.html#method-c-open">File.open</a></p>
+</li><li>
+<p><a href="../File.html#method-c-readlink">File.readlink</a></p>
+</li><li>
+<p><a href="../File.html#method-c-rename">File.rename</a></p>
+</li><li>
+<p><a href="../File.html#method-c-stat">File.stat</a></p>
+</li><li>
+<p><a href="../File.html#method-c-symlink">File.symlink</a></p>
+</li><li>
+<p><a href="../File.html#method-c-truncate">File.truncate</a></p>
+</li><li>
+<p><a href="../File.html#method-c-unlink">File.unlink</a></p>
+</li><li>
+<p><a href="../File.html#method-c-utime">File.utime</a></p>
+</li><li>
+<p><a href="../IO.html#method-i-close">IO#close</a></p>
+</li><li>
+<p><a href="../Object.html#method-i-dup">Object#dup</a></p>
+</li><li>
+<p><a href="../IO.html#method-i-fsync">IO#fsync</a></p>
+</li><li>
+<p><a href="../IO.html#method-i-read">IO#read</a></p>
+</li><li>
+<p><a href="../IO.html#method-i-read_nonblock">IO#read_nonblock</a></p>
+</li><li>
+<p><a href="../IO.html#method-i-stat">IO#stat</a></p>
+</li><li>
+<p><a href="../IO.html#method-i-sysread">IO#sysread</a></p>
+</li><li>
+<p><a href="../IO.html#method-i-syswrite">IO#syswrite</a></p>
+</li><li>
+<p><a href="../IO.html#method-c-select">IO.select</a></p>
+</li><li>
+<p><a href="../IO.html#method-c-pipe">IO.pipe</a></p>
+</li><li>
+<p><a href="../Process.html#method-c-clock_gettime">Process.clock_gettime</a></p>
+</li><li>
+<p><a href="../Process.html#method-c-exit-21">Process.exit!</a></p>
+</li><li>
+<p><a href="../Process.html#method-c-fork">Process.fork</a></p>
+</li><li>
+<p><a href="../Process.html#method-c-kill">Process.kill</a></p>
+</li><li>
+<p><a href="../Process.html#method-c-pid">Process.pid</a></p>
+</li><li>
+<p><a href="../Process.html#method-c-ppid">Process.ppid</a></p>
+</li><li>
+<p><a href="../Process.html#method-c-waitpid">Process.waitpid</a></p>
+</li></ul>
+
+<p>…</p>
+
+	</div>
+
+
+                <div id="footer">
+                
+                <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>. <a href="http://neurogami.com">Maximum R+D</a>.  <div class='oio-inline'><ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script></div></p>
+
+                
+                <p id="validator-badges"><small>Generated with Rubydoc Rdoc Generator 0.42.0</small>.</p>
+              </div>
+
+
+    
+
+
+</body>
+
+</html>
+
