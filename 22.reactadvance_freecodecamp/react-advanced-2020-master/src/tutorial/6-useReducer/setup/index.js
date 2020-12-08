@@ -1,34 +1,31 @@
 import React, { useState, useReducer } from 'react';
 import Modal from './Modal';
-import { data } from '../../../data';
+import {reducer} from './reduce'
 // reducer function
 const defaultState = {
-  people:[],
+  people: [],
   isModalOpen:false,
   modalContent:'Empty'
 }
-const reducer = (state, action) => {
-  console.log(state, action)
-  if(action.type === 'TT'){
-    return {...state,people:data,isModalOpen:true,modalContent:'item added'}
-  }
-  return state
-  throw new Error('no match')
-}
+
 const Index = () => {
   const [name,setName] = useState('')
   const [state,dispatch] = useReducer(reducer,defaultState)
   const handleSubmit = (e) => {
     e.preventDefault()
     if(name){
-      dispatch({type: 'TT'})
+      const newItem = {id:new Date().getTime().toString(),name}
+      dispatch({type: 'ADD_ITEM', payday: newItem})
     }
     else{
-      
+      dispatch({type: 'NO_VALUE'})
     }
   }
-  return <>
-    {state.isModalOpen && <Modal modalContent={state.modalContent}/>}
+  const closeModal = () => {
+    dispatch({type: 'CLOSE_MODAL'})
+  }
+  return (<>
+    {state.isModalOpen && (<Modal closeModal={closeModal} modalContent={state.modalContent}/>)}
     <form action="" onSubmit={handleSubmit} className="form">
       <div className="">
         <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
@@ -36,11 +33,12 @@ const Index = () => {
       <button type='submit'>Add</button>
     </form>
     {state.people.map((person) => {
-      return <div className="" key={person.id}>
-        <h4>{person.name}</h4>  
+      return <div className="item" key={person.id}>
+        <h4>{person.name}</h4>
+        <button onClick={() => dispatch({type:'REMOVE_ITEM', payday:person.id})}>Remove</button>  
       </div>
     })}
-  </>;
+  </>)
 };
 
 export default Index;
